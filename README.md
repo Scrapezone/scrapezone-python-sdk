@@ -23,25 +23,21 @@ Send a request with up to 1,000 URLs and receive the raw, unblocked HTML files.
 ## Example request:
 
 ```
-from client import ScrapeZoneClient
+from client import ScrapezoneClient
 from decouple import config
 
 username = config('SCRAPEZONE_USERNAME')
 password = config('SCRAPEZONE_PASSWORD')
 
-scrapeZoneClient = ScrapeZoneClient(username, password)
+scrapezoneClient = ScrapezoneClient(username, password)
 
-scraper_name = 'amazon_product_display'
-query = [
-    'https://amazon.com/dp/B01LSUQSB0',
-    'https://amazon.com/dp/B084K5HNCB'
-]
-
-results = scrapeZoneClient.scrape(
-    {'scraper_name': scraper_name, 'query': query})
+results = scrapezoneClient.scrape(
+    {'scraper_name': 'amazon_product_display', 'query': [
+        'https://amazon.com/dp/B01LSUQSB0',
+        'https://amazon.com/dp/B084K5HNCB'
+    ]})
 
 print(results)
-
 ```
 
 Full documentation can be found [Here](https://github.com/Scrapezone/documentation).

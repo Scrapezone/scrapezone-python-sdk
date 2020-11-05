@@ -7,7 +7,7 @@ from requests.auth import HTTPBasicAuth
 endpoint = 'https://api.scrapezone.com/scrape'
 
 
-class ScrapeZoneClient:
+class ScrapezoneClient:
     def __init__(self, username, password):
         self.username = username
         self.password = password
@@ -46,6 +46,3 @@ class ScrapeZoneClient:
 
         except:
             print("Unexpected error:", sys.exc_info()[0])
-
-    def log(self):
-        print(self.username, self.password)
