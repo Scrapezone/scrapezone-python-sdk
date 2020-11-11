@@ -1,4 +1,4 @@
-from client import ScrapezoneClient
+from scrapezone_client import ScrapezoneClient
 from decouple import config
 
 username = config('SCRAPEZONE_USERNAME')

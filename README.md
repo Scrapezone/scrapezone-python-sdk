@@ -23,7 +23,7 @@ Send a request with up to 1,000 URLs and receive the raw, unblocked HTML files.
 ## Example request:
 
 ```
-from client import ScrapezoneClient
+from scrapezone_client import ScrapezoneClient
 from decouple import config
 
 username = config('SCRAPEZONE_USERNAME')
